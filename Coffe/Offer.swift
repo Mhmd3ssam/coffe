@@ -1,10 +1,3 @@
-//
-//  Offer.swift
-//  Coffe
-//
-//  Created by Mhmd Essam on 22/10/2022.
-//
-
 import SwiftUI
 
 struct Offer: View {
@@ -15,7 +8,13 @@ struct Offer: View {
     var body: some View {
         VStack{
             Text(title)
+                .padding()
+                .font(.title)
+                .background(Color("CardBackground"))
             Text(description)
+                .padding()
+                .background(Color("CardBackground"))
+
 
         }
     }
