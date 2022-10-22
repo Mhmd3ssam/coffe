@@ -10,12 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @State var name = "Mhmd"
     var body: some View {
-        VStack{
-            TextField("Enter Your name", text: $name)
-            Text("Hello, \(name)")
-                .padding()
-        }
-       
+    OffersPage()
     }
 }
 
