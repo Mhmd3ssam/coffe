@@ -8,14 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var name = "Mhmd"
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack{
+            TextField("Enter Your name", text: $name)
+            Text("Hello, \(name)")
+                .padding()
+        }
+       
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .previewInterfaceOrientation(.portrait)
     }
+    
+
 }
