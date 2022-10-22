@@ -1,16 +1,29 @@
-//
-//  ContentView.swift
-//  Coffe
-//
-//  Created by Mhmd Essam on 21/10/2022.
-//
-
 import SwiftUI
 
 struct ContentView: View {
-    @State var name = "Mhmd"
     var body: some View {
-    OffersPage()
+        TabView{
+            Text("Home Page")
+                .tabItem {
+                    Image(systemName: "cup.and.saucer")
+                    Text("Menu")
+                }
+            OffersPage()
+                .tabItem {
+                    Image(systemName: "tag")
+                    Text("Offers")
+                }
+            Text("Order Page")
+                .tabItem {
+                    Image(systemName: "cart")
+                    Text("Order")
+                }
+            Text("Info Page")
+                .tabItem {
+                    Image(systemName: "info")
+                    Text("Info")
+                }
+        }
     }
 }
 
