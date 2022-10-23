@@ -1,17 +1,19 @@
 import SwiftUI
 
 struct ProductItem: View {
+    var product: Product
+    
     var body: some View {
         VStack{
-            Image("DummyImage")
+            AsyncImage(url: product.imageURL )
               .frame(width: 300, height: 150)
               .background(Color("AccentColor"))
             HStack {
               VStack(alignment: .leading) {
-                Text("Product Name")
+                  Text(product.name)
                     .font(.title3)
                     .bold()
-                Text("$ 4.25")
+                  Text("$ \(product.price)")
                     .font(.caption)
 
         }.padding(8)
@@ -28,6 +30,6 @@ struct ProductItem: View {
 
 struct ProductItem_Previews: PreviewProvider {
     static var previews: some View {
-        ProductItem()
+        ProductItem(product: Product(Id:1, name:"Coffe", descripition:"", price:123, image:""))
     }
 }
