@@ -1,5 +1,5 @@
 import Foundation
 
-class CartManager {
+class CartManager : ObservableObject {
     
 }
